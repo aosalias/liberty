@@ -1,0 +1,14 @@
+.bill {
+  width: 78%;
+  float: left;
+  word-wrap: break-word;
+}
+
+.bill_li {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.bill li {
+  display: inline;
+}

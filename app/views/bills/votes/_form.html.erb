@@ -1,0 +1,4 @@
+<% form_for [bill, bill.votes.new], :url => bill_votes_path(bill) do |f| %>
+  <%= hidden_field_tag :yes, vote %>
+  <%= f.submit "Vote #{vote ? 'Yes' : 'No'}!" %>
+<% end %>

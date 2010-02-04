@@ -1,0 +1,20 @@
+.bill_vote {
+  width: 20%;
+  float: right;
+}
+
+.bill_vote .vote {
+  float: right;
+}
+
+.bill_vote .vote_yes {
+  color: green;
+}
+
+.bill_vote .vote_no {
+  color: red;
+}
+
+.bill_vote .votes {
+  float: left;
+}

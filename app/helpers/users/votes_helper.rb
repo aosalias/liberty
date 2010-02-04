@@ -1,0 +1,2 @@
+module Users::VotesHelper
+end

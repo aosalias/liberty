@@ -1,0 +1,10 @@
+<div class="bill">
+  <% title @bill.name %>
+  <% if permitted_to?(:edit, :bills) %>
+    <li><%= link_to 'Edit', edit_bill_path(@bill) %></li>
+    <li><%= link_to 'Destroy', @bill, :confirm => 'Are you sure?', :method => :delete %></li>
+  <% end %>
+  <p><%= simple_format @bill.body %></p>
+</div>
+<%=  render :partial => "bills/votes/bill_vote", :locals => { :bill => @bill } %>
+

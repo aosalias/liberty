@@ -1,0 +1,21 @@
+<div id="user_nav">
+  <% if current_user %>
+    <%= link_to "Edit Profile", edit_user_path(current_user) %> |
+    <%= link_to "Logout", logout_path %>
+  <% else %>
+    <%= link_to "Register", new_user_path %> |
+    <%= link_to "Login", login_path %>
+  <% end %>
+</div>
+
+<h1>Democracy!</h1>
+
+<div id='site_nav'>
+    <li><%= link_to 'Home', root_path %></li> |
+    <li><%= link_to 'Bills', bills_path %></li> |
+    <li><%= link_to 'About', about_path %></li>
+    <% if current_user %>
+     | <li><%= link_to 'My Votes', user_votes_path(current_user) %></li>
+    <% end %>
+</div>
+

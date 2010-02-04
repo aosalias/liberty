@@ -1,0 +1,3 @@
+<% title "Bills" %>
+<p><%= link_to 'New bill', new_bill_path if permitted_to?(:create, :bills) %><p>
+<%= render :partial => "bill", :collection => @bills, :as => :bill %>

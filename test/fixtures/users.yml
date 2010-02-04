@@ -1,0 +1,7 @@
+admin:
+  id: 1
+  username: aosalias
+  email: aosalias@gmail.com
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("olsen" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>

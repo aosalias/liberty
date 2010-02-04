@@ -1,0 +1,1 @@
+Experiments in role based authorization using declarative authorization and authlogic.  Also used pivotal labs' jelly with jQuery ajaxForm. Nested restful controllers bill votes and user votes share vote model.

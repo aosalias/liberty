@@ -1,0 +1,7 @@
+<li class="bill_li clearfix">
+  <div class='bill'>
+    <h2><%= link_to bill.name, bill %></h2>
+    <p><%= truncate(bill.body, :length => 329) %></p>
+  </div>
+  <%=  render :partial => "bills/votes/bill_vote", :locals => { :bill => bill } %>
+</li>

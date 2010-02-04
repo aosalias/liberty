@@ -1,0 +1,28 @@
+<div class='bill_vote' id=<%= bill.id.to_s %> >
+  <h3>Votes For:</h3>
+  <div class='clearfix'>
+    <span class='votes yes_votes'><%= bill.yes_votes %></span>
+    <span class='vote vote_yes'>
+      <% if current_user_voted_yes_on?(bill.id) %>
+        Aye!
+      <% elsif !current_user_voted_on?(bill.id) && permitted_to?(:create, :bills_votes) %>
+        <%= render :partial => "/bills/votes/form", :locals => { :bill => bill, :vote => true } %>
+      <% end %>
+    </span>
+  </div>
+  <h3>Votes Against:</h3>
+  <div class='clearfix'>
+    <span class='votes no_votes'><%= bill.no_votes %></span>
+    <span class='vote vote_no'>
+      <% if current_user_voted_no_on?(bill.id) %>
+        Nay!
+      <% elsif !current_user_voted_on?(bill.id) && permitted_to?(:create, :bills_votes) %>
+        <%= render :partial => "/bills/votes/form", :locals => { :bill => bill, :vote => false } %>
+      <% end %>
+    </span>
+  </div>
+</div>
+
+<% content_for :javascript do -%>
+  <% attach_javascript_component('RemoteVote') %>
+<% end -%>
