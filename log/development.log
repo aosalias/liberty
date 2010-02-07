@@ -43303,3 +43303,327 @@ Rendered bills/_bill (12.0ms)
 Rendered shared/_header (1.3ms)
 Rendered shared/_footer (0.1ms)
 Completed in 218ms (View: 47, DB: 8) | 200 OK [http://localhost/bills]
+  [4;36;1mSQL (482.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#home (for 127.0.0.1 at 2010-02-07 13:31:36) [GET]
+  Parameters: {"action"=>"home", "controller"=>"home"}
+  [4;35;1mUser Columns (786.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mBill Load (187.0ms)[0m   [0;1mSELECT * FROM `bills` LIMIT 1[0m
+Rendering template within layouts/application
+Rendering home/home
+  [4;35;1mBill Columns (42.5ms)[0m   [0mSHOW FIELDS FROM `bills`[0m
+  [4;36;1mVote Columns (86.2ms)[0m   [0;1mSHOW FIELDS FROM `votes`[0m
+  [4;35;1mSQL (79.5ms)[0m   [0mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 1) AND (`votes`.bill_id = 1)) AND (`votes`.bill_id = 1)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 0) AND (`votes`.bill_id = 1)) AND (`votes`.bill_id = 1)) [0m
+Rendered bills/votes/_bill_vote (252.2ms)
+Rendered bills/_bill (459.9ms)
+Rendered shared/_header (7.0ms)
+Rendered shared/_footer (10.0ms)
+Completed in 2251ms (View: 480, DB: 1664) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BillsController#index (for 127.0.0.1 at 2010-02-07 13:31:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"bills"}
+  [4;36;1mUser Columns (28.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mBill Load (53.2ms)[0m   [0mSELECT * FROM `bills` [0m
+Rendering template within layouts/application
+Rendering bills/index
+  [4;36;1mBill Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `bills`[0m
+  [4;35;1mVote Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `votes`[0m
+  [4;36;1mSQL (8.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 1) AND (`votes`.bill_id = 1)) AND (`votes`.bill_id = 1)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 0) AND (`votes`.bill_id = 1)) AND (`votes`.bill_id = 1)) [0m
+Rendered bills/votes/_bill_vote (23.8ms)
+Rendered bills/_bill (29.5ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 1) AND (`votes`.bill_id = 2)) AND (`votes`.bill_id = 2)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 0) AND (`votes`.bill_id = 2)) AND (`votes`.bill_id = 2)) [0m
+Rendered bills/votes/_bill_vote (6.7ms)
+Rendered bills/_bill (7.9ms)
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.1ms)
+Completed in 179ms (View: 52, DB: 93) | 200 OK [http://localhost/bills]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BillsController#index (for 127.0.0.1 at 2010-02-07 13:31:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"bills"}
+  [4;35;1mUser Columns (35.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mBill Load (0.3ms)[0m   [0;1mSELECT * FROM `bills` [0m
+Rendering template within layouts/application
+Rendering bills/index
+  [4;35;1mBill Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `bills`[0m
+  [4;36;1mVote Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `votes`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 1) AND (`votes`.bill_id = 1)) AND (`votes`.bill_id = 1)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 0) AND (`votes`.bill_id = 1)) AND (`votes`.bill_id = 1)) [0m
+Rendered bills/votes/_bill_vote (15.3ms)
+Rendered bills/_bill (19.9ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 1) AND (`votes`.bill_id = 2)) AND (`votes`.bill_id = 2)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 0) AND (`votes`.bill_id = 2)) AND (`votes`.bill_id = 2)) [0m
+Rendered bills/votes/_bill_vote (6.5ms)
+Rendered bills/_bill (7.6ms)
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.1ms)
+Completed in 172ms (View: 33, DB: 39) | 200 OK [http://localhost/bills]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-02-07 13:31:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered shared/_header (0.6ms)
+Rendered shared/_footer (0.1ms)
+Completed in 71ms (View: 45, DB: 1) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-02-07 13:31:54) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"aosalias", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"wXFqD4pgBLzQ4XDq1p4t49Anyf0gf4cG9fYkdlON7ik=", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (177.1ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.username) = 'aosalias') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 685ms (DB: 178) | 302 Found [http://localhost/user_sessions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#home (for 127.0.0.1 at 2010-02-07 13:31:55) [GET]
+  Parameters: {"action"=>"home", "controller"=>"home"}
+  [4;35;1mUser Columns (4.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mBill Load (0.2ms)[0m   [0mSELECT * FROM `bills` LIMIT 1[0m
+Rendering template within layouts/application
+Rendering home/home
+  [4;36;1mBill Columns (12.5ms)[0m   [0;1mSHOW FIELDS FROM `bills`[0m
+  [4;35;1mVote Columns (25.3ms)[0m   [0mSHOW FIELDS FROM `votes`[0m
+  [4;36;1mSQL (17.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 1) AND (`votes`.bill_id = 1)) AND (`votes`.bill_id = 1)) [0m
+  [4;35;1mVote Load (0.2ms)[0m   [0mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 1) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 0) AND (`votes`.bill_id = 1)) AND (`votes`.bill_id = 1)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 1) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 1) AND (`votes`.user_id = 1) LIMIT 1[0m
+Rendered bills/votes/_bill_vote (63.4ms)
+Rendered bills/_bill (80.0ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 131ms (View: 33, DB: 61) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BillsController#index (for 127.0.0.1 at 2010-02-07 13:31:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"bills"}
+  [4;36;1mUser Columns (9.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mRole Load (41.2ms)[0m   [0;1mSELECT name FROM `roles` [0m
+  [4;35;1mRole Columns (11.9ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (73.4ms)[0m   [0;1mSELECT DISTINCT `roles`.* FROM `roles` INNER JOIN `assignments` ON `roles`.id = `assignments`.role_id WHERE ((`assignments`.user_id = 1)) [0m
+  [4;35;1mBill Load (0.3ms)[0m   [0mSELECT * FROM `bills` [0m
+Rendering template within layouts/application
+Rendering bills/index
+  [4;36;1mBill Columns (8.5ms)[0m   [0;1mSHOW FIELDS FROM `bills`[0m
+  [4;35;1mVote Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `votes`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 1) AND (`votes`.bill_id = 1)) AND (`votes`.bill_id = 1)) [0m
+  [4;35;1mVote Load (0.2ms)[0m   [0mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 1) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 0) AND (`votes`.bill_id = 1)) AND (`votes`.bill_id = 1)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 1) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 1) AND (`votes`.user_id = 1) LIMIT 1[0m
+Rendered bills/votes/_bill_vote (28.1ms)
+Rendered bills/_bill (40.5ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 1) AND (`votes`.bill_id = 2)) AND (`votes`.bill_id = 2)) [0m
+  [4;36;1mVote Load (0.2ms)[0m   [0;1mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 2) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 2) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 0) AND (`votes`.bill_id = 2)) AND (`votes`.bill_id = 2)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 2) AND (`votes`.user_id = 1) LIMIT 1[0m
+Rendered bills/votes/_bill_vote (9.1ms)
+Rendered bills/_bill (10.2ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 399ms (View: 42, DB: 156) | 200 OK [http://localhost/bills]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BillsController#new (for 127.0.0.1 at 2010-02-07 13:32:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"bills"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mBill Columns (9.2ms)[0m   [0mSHOW FIELDS FROM `bills`[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT name FROM `roles` [0m
+  [4;35;1mRole Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT DISTINCT `roles`.* FROM `roles` INNER JOIN `assignments` ON `roles`.id = `assignments`.role_id WHERE ((`assignments`.user_id = 1)) [0m
+Rendering template within layouts/application
+Rendering bills/new
+Rendered shared/_header (1.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 199ms (View: 110, DB: 15) | 200 OK [http://localhost/bills/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BillsController#create (for 127.0.0.1 at 2010-02-07 13:32:03) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"wXFqD4pgBLzQ4XDq1p4t49Anyf0gf4cG9fYkdlON7ik=", "bill"=>{"name"=>"", "body"=>""}, "controller"=>"bills"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mBill Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `bills`[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT name FROM `roles` [0m
+  [4;36;1mRole Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT DISTINCT `roles`.* FROM `roles` INNER JOIN `assignments` ON `roles`.id = `assignments`.role_id WHERE ((`assignments`.user_id = 1)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering bills/new
+Rendered shared/_header (1.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 75ms (View: 16, DB: 5) | 200 OK [http://localhost/bills]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BillsController#index (for 127.0.0.1 at 2010-02-07 13:38:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"bills"}
+  [4;35;1mUser Columns (45.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT name FROM `roles` [0m
+  [4;36;1mRole Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT DISTINCT `roles`.* FROM `roles` INNER JOIN `assignments` ON `roles`.id = `assignments`.role_id WHERE ((`assignments`.user_id = 1)) [0m
+  [4;36;1mBill Load (0.2ms)[0m   [0;1mSELECT * FROM `bills` [0m
+Rendering template within layouts/application
+Rendering bills/index
+  [4;35;1mBill Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `bills`[0m
+  [4;36;1mVote Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `votes`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 1) AND (`votes`.bill_id = 1)) AND (`votes`.bill_id = 1)) [0m
+  [4;36;1mVote Load (0.1ms)[0m   [0;1mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 1) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 0) AND (`votes`.bill_id = 1)) AND (`votes`.bill_id = 1)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 1) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 1) AND (`votes`.user_id = 1) LIMIT 1[0m
+Rendered bills/votes/_bill_vote (18.6ms)
+Rendered bills/_bill (23.2ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 1) AND (`votes`.bill_id = 2)) AND (`votes`.bill_id = 2)) [0m
+  [4;35;1mVote Load (0.1ms)[0m   [0mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 2) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 2) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 0) AND (`votes`.bill_id = 2)) AND (`votes`.bill_id = 2)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 2) AND (`votes`.user_id = 1) LIMIT 1[0m
+Rendered bills/votes/_bill_vote (8.4ms)
+Rendered bills/_bill (9.7ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 223ms (View: 38, DB: 52) | 200 OK [http://localhost/bills]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BillsController#new (for 127.0.0.1 at 2010-02-07 13:39:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"bills"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mBill Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `bills`[0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT name FROM `roles` [0m
+  [4;36;1mRole Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT DISTINCT `roles`.* FROM `roles` INNER JOIN `assignments` ON `roles`.id = `assignments`.role_id WHERE ((`assignments`.user_id = 1)) [0m
+Rendering template within layouts/application
+Rendering bills/new
+Rendered shared/_header (1.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 69ms (View: 12, DB: 4) | 200 OK [http://localhost/bills/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BillsController#create (for 127.0.0.1 at 2010-02-07 13:39:07) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"wXFqD4pgBLzQ4XDq1p4t49Anyf0gf4cG9fYkdlON7ik=", "bill"=>{"name"=>"asd", "body"=>"asd"}, "controller"=>"bills"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mBill Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `bills`[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT name FROM `roles` [0m
+  [4;35;1mRole Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT DISTINCT `roles`.* FROM `roles` INNER JOIN `assignments` ON `roles`.id = `assignments`.role_id WHERE ((`assignments`.user_id = 1)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mBill Create (22.6ms)[0m   [0;1mINSERT INTO `bills` (`name`, `created_at`, `body`, `updated_at`) VALUES('asd', '2010-02-07 21:39:07', 'asd', '2010-02-07 21:39:07')[0m
+  [4;35;1mSQL (17.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/bills/3
+Completed in 104ms (DB: 45) | 302 Found [http://localhost/bills]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BillsController#show (for 127.0.0.1 at 2010-02-07 13:39:07) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"bills"}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mBill Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `bills`[0m
+  [4;36;1mBill Load (0.2ms)[0m   [0;1mSELECT * FROM `bills` WHERE (`bills`.`id` = 3) [0m
+  [4;35;1mRole Load (0.2ms)[0m   [0mSELECT name FROM `roles` [0m
+  [4;36;1mRole Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT DISTINCT `roles`.* FROM `roles` INNER JOIN `assignments` ON `roles`.id = `assignments`.role_id WHERE ((`assignments`.user_id = 1)) [0m
+Rendering template within layouts/application
+Rendering bills/show
+  [4;36;1mVote Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `votes`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 1) AND (`votes`.bill_id = 3)) AND (`votes`.bill_id = 3)) [0m
+  [4;36;1mVote Load (0.1ms)[0m   [0;1mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 3) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 3) AND (`votes`.user_id = 1) LIMIT 1[0m
+Rendered bills/votes/_form (5.6ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 0) AND (`votes`.bill_id = 3)) AND (`votes`.bill_id = 3)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 3) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 3) AND (`votes`.user_id = 1) LIMIT 1[0m
+Rendered bills/votes/_form (2.6ms)
+Rendered bills/votes/_bill_vote (32.6ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 184ms (View: 51, DB: 6) | 200 OK [http://localhost/bills/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BillsController#index (for 127.0.0.1 at 2010-02-07 13:39:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"bills"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT name FROM `roles` [0m
+  [4;35;1mRole Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT DISTINCT `roles`.* FROM `roles` INNER JOIN `assignments` ON `roles`.id = `assignments`.role_id WHERE ((`assignments`.user_id = 1)) [0m
+  [4;35;1mBill Load (0.2ms)[0m   [0mSELECT * FROM `bills` [0m
+Rendering template within layouts/application
+Rendering bills/index
+  [4;36;1mBill Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `bills`[0m
+  [4;35;1mVote Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `votes`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 1) AND (`votes`.bill_id = 1)) AND (`votes`.bill_id = 1)) [0m
+  [4;35;1mVote Load (0.3ms)[0m   [0mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 1) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 0) AND (`votes`.bill_id = 1)) AND (`votes`.bill_id = 1)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 1) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 1) AND (`votes`.user_id = 1) LIMIT 1[0m
+Rendered bills/votes/_bill_vote (95.4ms)
+Rendered bills/_bill (99.9ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 1) AND (`votes`.bill_id = 2)) AND (`votes`.bill_id = 2)) [0m
+  [4;36;1mVote Load (0.2ms)[0m   [0;1mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 2) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 2) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 0) AND (`votes`.bill_id = 2)) AND (`votes`.bill_id = 2)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 2) AND (`votes`.user_id = 1) LIMIT 1[0m
+Rendered bills/votes/_bill_vote (8.9ms)
+Rendered bills/_bill (10.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 1) AND (`votes`.bill_id = 3)) AND (`votes`.bill_id = 3)) [0m
+  [4;35;1mVote Load (0.2ms)[0m   [0mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 3) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 3) AND (`votes`.user_id = 1) LIMIT 1[0m
+Rendered bills/votes/_form (3.2ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 0) AND (`votes`.bill_id = 3)) AND (`votes`.bill_id = 3)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 3) AND (`votes`.user_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `votes` WHERE (`votes`.`bill_id` = 3) AND (`votes`.user_id = 1) LIMIT 1[0m
+Rendered bills/votes/_form (2.6ms)
+Rendered bills/votes/_bill_vote (16.5ms)
+Rendered bills/_bill (17.6ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 191ms (View: 132, DB: 7) | 200 OK [http://localhost/bills]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Bills::VotesController#create (for 127.0.0.1 at 2010-02-07 13:39:38) [POST]
+  Parameters: {"commit"=>"Vote Yes!", "action"=>"create", "authenticity_token"=>"wXFqD4pgBLzQ4XDq1p4t49Anyf0gf4cG9fYkdlON7ik=", "yes"=>"true", "controller"=>"bills/votes", "bill_id"=>"3"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mBill Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `bills`[0m
+  [4;36;1mBill Load (0.2ms)[0m   [0;1mSELECT * FROM `bills` WHERE (`bills`.`id` = 3) [0m
+  [4;35;1mVote Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `votes`[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT name FROM `roles` [0m
+  [4;35;1mRole Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT DISTINCT `roles`.* FROM `roles` INNER JOIN `assignments` ON `roles`.id = `assignments`.role_id WHERE ((`assignments`.user_id = 1)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `bills` WHERE (`bills`.`id` = 3) [0m
+  [4;35;1mVote Load (0.2ms)[0m   [0mSELECT `votes`.id FROM `votes` WHERE (`votes`.`bill_id` = 3 AND `votes`.user_id = 1) LIMIT 1[0m
+  [4;36;1mVote Create (0.1ms)[0m   [0;1mINSERT INTO `votes` (`created_at`, `updated_at`, `user_id`, `yes`, `bill_id`) VALUES('2010-02-07 21:39:38', '2010-02-07 21:39:38', 1, 1, 3)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 0) AND (`votes`.bill_id = 3)) AND (`votes`.bill_id = 3)) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `votes` WHERE (((`votes`.`yes` = 1) AND (`votes`.bill_id = 3)) AND (`votes`.bill_id = 3)) [0m
+Completed in 200ms (View: 98, DB: 7) | 200 OK [http://localhost/bills/3/votes]
